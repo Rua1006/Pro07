@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+
+    <!-- Enables the Spring MVC @Controller programming model -->
+    <annotation-driven />
+
+    <!-- WEB-INF 디렉토리는 보안이 되어있으므로 해당 디렉토리에 대한 요청시 그 접근이 가능하도록 설정 -->
+    <resources mapping="/resources/**" location="/resources/" />
+
+    <resources mapping="/common/**" location="/WEB-INF/views/common" />
+    <resources mapping="/include/**" location="/WEB-INF/views/include" />
+    <resources mapping="/users/**" location="/WEB-INF/views/users" />
+    <resources mapping="/notice/**" location="/WEB-INF/views/notice" />
+    <resources mapping="/util/**" location="/WEB-INF/views/util" />
+    <resources mapping="/qna/**" location="/WEB-INF/views/qna" />
+    <resources mapping="/data/**" location="/WEB-INF/views/data" />
+    <resources mapping="/research/**" location="/WEB-INF/views/research" />
+    <resources mapping="/sample/**" location="/WEB-INF/views/sample" />
+
+    <!-- 뷰(.jsp)에 대한 접두사와 접미사 처리하여 반환할 때의 설정 : 뷰리졸버 설정 -->
+    <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <beans:property name="prefix" value="/WEB-INF/views/" />
+        <beans:property name="suffix" value=".jsp" />
+    </beans:bean>
+
+    <!-- 파일 업로드 정보 등록 -->
+    <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <beans:property name="maxUploadSize" value="10485760" />
+    </beans:bean>
+    <beans:bean id="uploadPath" class="java.lang.String">
+        <beans:constructor-arg value="D:\kbs\pro07\pro07\src\main\webapp\resources\upload"/>
+    </beans:bean>
+
+    <context:component-scan base-package="kr.go.mfds" />
+
+    <!-- 하단에 인터셉터 추가 -->
+
+
+</beans:beans>
