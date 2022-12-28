@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="users">
+
+	<select id="usersList" resultType="kr.go.mfds.dto.UsersDTO">
+		select * from users
+	</select>
+
+	<select id="getusers" resultType="kr.go.mfds.dto.UsersDTO">
+		select * from users where id=#{id}
+	</select>
+	<!-- 로그인 -->
+	<select id="signIn" resultType="kr.go.mfds.dto.UsersDTO">
+		select * from users where id = #{id}
+	</select>
+
+	<select id="loginCheck" resultType="kr.go.mfds.dto.UsersDTO">
+		select id, pw, name from users where id = #{id}
+	</select>
+
+	<select id="login" resultType="kr.go.mfds.dto.UsersDTO">
+		select id, pw, name from users where id = #{id}
+	</select>
+	<!-- 회원가입 -->
+	<insert id="usersInsert" parameterType="kr.go.mfds.dto.UsersDTO">
+		insert into users values (#{id}, #{pw}, #{name})
+	</insert>
+	<!-- 회원정보변경 -->
+	<update id="usersUpdate" parameterType="kr.go.mfds.dto.UsersDTO">
+	update users set pw=#{pw }, name=#{name } where id = #{id}
+	</update>
+	<!-- 회원탈퇴 -->
+	<delete id="usersDelete" parameterType="kr.go.mfds.dto.UsersDTO">
+	delete from users where id=#{id}
+	</delete>
+</mapper>
