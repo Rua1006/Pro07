@@ -16,37 +16,33 @@
 <%-- 네비게이션 --%>
 <jsp:include page="${path1}include/header.jsp"></jsp:include>
 <%-- 테이블 메인 --%>
-<div class="content" >
-  <table>
-    <thead>
-    <tr>
-      <th width="200">Table Header</th>
-      <th>Table Header</th>
-      <th width="150">Table Header</th>
-      <th width="150">Table Header</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>Content Goes Here</td>
-      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-    <tr>
-      <td>Content Goes Here</td>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-    <tr>
-      <td>Content Goes Here</td>
-      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-      <td>Content Goes Here</td>
-      <td>Content Goes Here</td>
-    </tr>
-    </tbody>
-  </table>
+<div class="content row column text-center" >
+  <h2>공지사항 목록</h2>
+  <div class="bd_wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>No</th>
+          <th>No</th>
+          <th>No</th>
+        </tr>
+      </thead>
+      <tbody>
+      <c:forEach items="${noticeList}" var="notice" varStatus="status">
+        <tr>
+          <td>${status.count}</td>
+          <td><a href="/notice/detail.do?no=${notice.no}">${notice.title}</a></td>
+          <td>${notice.resdate}</td>
+          <td>${notice.visited}</td>
+        </tr>
+      </c:forEach>
+      </tbody>
+    </table>
+    <div calss="button-group">
+      <a href="${path1}/notice/insert.do">작성하기</a>
+    </div>
+  </div>
 </div>
 <%-- 하단푸터 --%>
 <jsp:include page="${path1}include/footer.jsp"></jsp:include>

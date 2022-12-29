@@ -17,4 +17,24 @@ public class NoticeDAOImpl implements NoticeDAO{
     public List<NoticeDTO> noticeList() throws Exception {
         return sqlSession.selectList("notice.noticeList");
     }
+
+    @Override
+    public NoticeDTO getNotice(int no) throws Exception {
+        return sqlSession.selectOne("notice.getNotice", no);
+    }
+
+    @Override
+    public void noticeInsert(NoticeDTO noti) throws Exception {
+        sqlSession.insert("notice.noticeInsert", noti);
+    }
+
+    @Override
+    public void noticeUpdate(NoticeDTO noti) throws Exception {
+        sqlSession.update("notice.noticeUpdate", noti);
+    }
+
+    @Override
+    public void noticeDelete(int no) throws Exception {
+        sqlSession.delete("notice.noticeDelete", no);
+    }
 }

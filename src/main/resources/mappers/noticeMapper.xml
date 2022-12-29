@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="notice">
+    <!-- 공지사항 목록 -->
     <select id="noticeList" resultType="kr.go.mfds.dto.NoticeDTO">
         select * from notice
     </select>
+    <!-- 공지사항 자세히보기 -->
+    <select id="getNotice" resultType="kr.go.mfds.dto.NoticeDTO">
+        select * from notice where no=#{no}
+    </select>
+    <!--  공지사항 작성하기 -->
+    <insert id="noticeInsert" parameterType="kr.go.mfds.dto.NoticeDTO">
+        insert into notice(title, content, resdate, author) values(#{title}, #{content}, #{resdate}, #{author})
+    </insert>
+    <!-- 공지사항 수정하기 -->
+    <update id="noticeUpdate" parameterType="kr.go.mfds.dto.NoticeDTO">
+        update notice set title=#{title}, content=#{content} where no=#{no}
+    </update>
+    <!-- 공지사항 삭제하기 -->
+    <delete id="noticeDelete" parameterType="kr.go.mfds.dto.NoticeDTO">
+        delete from notice where no=#{no}
+    </delete>
 </mapper>

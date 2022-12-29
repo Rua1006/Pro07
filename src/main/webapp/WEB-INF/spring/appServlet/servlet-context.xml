@@ -14,7 +14,6 @@
 
     <!-- WEB-INF 디렉토리는 보안이 되어있으므로 해당 디렉토리에 대한 요청시 그 접근이 가능하도록 설정 -->
     <resources mapping="/resources/**" location="/resources/" />
-
     <resources mapping="/common/**" location="/WEB-INF/views/common" />
     <resources mapping="/include/**" location="/WEB-INF/views/include" />
     <resources mapping="/users/**" location="/WEB-INF/views/users" />

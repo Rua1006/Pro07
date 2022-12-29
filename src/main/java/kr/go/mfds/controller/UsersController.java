@@ -4,6 +4,7 @@ import kr.go.mfds.dto.UsersDTO;
 import kr.go.mfds.service.UsersService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,6 +33,7 @@ public class UsersController {
 
     @Autowired
     HttpSession session;
+
 
 //  회원목록 조회
     @RequestMapping(value = "list.do", method = RequestMethod.GET)
