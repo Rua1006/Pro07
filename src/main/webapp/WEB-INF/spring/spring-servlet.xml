@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans">
+	<!-- MessageSource -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="defaultEncoding">
+			<value>utf-8</value>
+		</property>
+		<property name="basenames">
+			<list>
+				<value>messages/messages_ko</value>
+			</list>
+		</property>
+	</bean>
+</beans>

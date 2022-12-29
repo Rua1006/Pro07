@@ -25,28 +25,29 @@ public class UsersDAOImpl implements UsersDAO{
     }
 
     @Override
-    public void usersInsert(UsersDTO users) throws Exception {
-        sqlSession.insert("users.usersInsert", users);
+    public void usersInsert(UsersDTO dto) throws Exception {
+        sqlSession.insert("users.usersInsert", dto);
     }
 
     @Override
-    public UsersDTO signIn(UsersDTO users) throws Exception {
-        return sqlSession.selectOne("users.signIn",users);
+    public UsersDTO signIn(UsersDTO mdto) throws Exception {
+        return sqlSession.selectOne("users.signIn", mdto);
     }
 
     @Override
-    public UsersDTO loginCheck(UsersDTO users) throws Exception {
-        return sqlSession.selectOne("users.loginCheck", users);
+    public UsersDTO loginCheck(UsersDTO mdto) throws Exception {
+        mdto = sqlSession.selectOne("users.loginCheck", mdto);
+        return mdto;
     }
 
     @Override
-    public UsersDTO login(UsersDTO users) throws Exception {
-        return sqlSession.selectOne("users.login", users);
+    public UsersDTO login(UsersDTO mdto) throws Exception {
+        return sqlSession.selectOne("users.login", mdto);
     }
 
     @Override
-    public void usersUpdate(UsersDTO users) throws Exception {
-        sqlSession.update("users.usersUpdate", users);
+    public void usersUpdate(UsersDTO mdto) throws Exception {
+        sqlSession.update("users.usersUpdate", mdto);
     }
 
     @Override

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
+
 @Service
 public class UsersServiceImpl implements UsersService {
 
@@ -31,33 +32,33 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
-    public void usersInsert(UsersDTO users) throws Exception {
-        usersDao.usersInsert(users);
+    public void usersInsert(UsersDTO dto) throws Exception {
+        usersDao.usersInsert(dto);
     }
 
     @Override
-    public UsersDTO signIn(UsersDTO users) throws Exception {
-        return usersDao.signIn(users);
+    public UsersDTO signIn(UsersDTO mdto) throws Exception {
+        return usersDao.signIn(mdto);
     }
 
     @Override
-    public UsersDTO loginCheck(UsersDTO users) throws Exception {
-        return usersDao.loginCheck(users);
+    public UsersDTO loginCheck(UsersDTO mdto) throws Exception {
+        return usersDao.loginCheck(mdto);
     }
 
     @Override
     public boolean login(HttpServletRequest request) throws Exception {
         HttpSession session = request.getSession();
         boolean loginSuccess = false;
-        UsersDTO users = new UsersDTO();
+        UsersDTO mdto = new UsersDTO();
 
-        users.setId(request.getParameter("id"));
-        users.setPw(request.getParameter("pw"));
+        mdto.setId(request.getParameter("id"));
+        mdto.setPw(request.getParameter("pw"));
 
-        UsersDTO login = usersDao.login(users);
+        UsersDTO login = usersDao.login(mdto);
 
-        loginSuccess = pwdEncoder.matches(users.getPw(), login.getPw());
-        if(login != null && loginSuccess==true){
+        loginSuccess =  pwdEncoder.matches(mdto.getPw(), login.getPw());
+        if(login != null && loginSuccess==true) {
             session.setAttribute("users", login);
             session.setAttribute("sid", login.getId());
             loginSuccess = true;
@@ -66,8 +67,8 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
-    public void usersUpdate(UsersDTO users) throws Exception {
-        usersDao.usersUpdate(users);
+    public void usersUpdate(UsersDTO mdto) throws Exception {
+        usersDao.usersUpdate(mdto);
     }
 
     @Override
