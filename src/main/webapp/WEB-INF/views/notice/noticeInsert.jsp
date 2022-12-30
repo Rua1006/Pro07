@@ -9,42 +9,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>공지사항</title>
+  <title>공지사항 작성하기</title>
   <jsp:include page="../include/head.jsp"></jsp:include>
 </head>
 <body>
 <%-- 네비게이션 --%>
 <jsp:include page="../include/header.jsp"></jsp:include>
-<%-- 테이블 메인 --%>
-<div class="content row column text-center" >
-  <h2>공지사항 목록</h2>
-  <div class="bd_wrap">
+<div class="content row column text-center">
+  <h2>공지사항 작성</h2>
+  <form action="${path1}/notice/insert.do" method="post">
     <table>
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>No</th>
-          <th>No</th>
-          <th>No</th>
-        </tr>
-      </thead>
       <tbody>
-      <c:forEach items="${noticeList}" var="notice" varStatus="status">
         <tr>
-          <td>${status.count}</td>
-          <td><a href="/notice/detail.do?no=${notice.no}">${notice.title}</a></td>
-          <td>${notice.resdate}</td>
-          <td>${notice.author}</td>
+          <th>제목</th>
+          <td>
+            <input type="text" placeholder="제목입력" maxlength="100" id="title" name="title" required>
+          </td>
         </tr>
-      </c:forEach>
+        <tr>
+          <th>내용</th>
+          <td>
+            <textarea name="content" id="content" cols="30" rows="10" maxlength="300" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th>작성자</th>
+          <td>
+            <input type="text" placeholder="관리자" readonly>
+          </td>
+        </tr>
       </tbody>
     </table>
-    <div calss="button-group">
-      <c:if test="${sid eq 'admin'}">
-      <a href="${path1}/notice/insert.do">작성하기</a>
-      </c:if>
+    <div class="button-group">
+      <input type="submit" class="submit success button" value="등록">
+      <a href="${path1}/notice/list.do" class="button">목록</a>
     </div>
-  </div>
+  </form>
 </div>
 <%-- 하단푸터 --%>
 <jsp:include page="../include/footer.jsp"></jsp:include>

@@ -11,7 +11,7 @@
     </select>
     <!--  공지사항 작성하기 -->
     <insert id="noticeInsert" parameterType="kr.go.mfds.dto.NoticeDTO">
-        insert into notice(title, content, resdate, author) values(#{title}, #{content}, #{resdate}, #{author})
+        insert into notice(title, content, author) values(#{title}, #{content}, '관리자')
     </insert>
     <!-- 공지사항 수정하기 -->
     <update id="noticeUpdate" parameterType="kr.go.mfds.dto.NoticeDTO">

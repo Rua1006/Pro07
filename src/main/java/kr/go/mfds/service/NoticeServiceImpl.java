@@ -35,6 +35,6 @@ public class NoticeServiceImpl implements NoticeService{
 
     @Override
     public void noticeDelete(int no) throws Exception {
-
+        noticeDao.noticeDelete(no);
     }
 }

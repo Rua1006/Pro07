@@ -33,11 +33,11 @@ public class UsersController {
     @Autowired
     UsersService usersService;
 
-    @Inject
-    BCryptPasswordEncoder pwdEncoder;
-
     @Autowired
     HttpSession session;
+
+    @Inject
+    BCryptPasswordEncoder pwdEncoder;
 
     @Bean
     BCryptPasswordEncoder passwordEncoder() {
@@ -45,22 +45,20 @@ public class UsersController {
         return new BCryptPasswordEncoder();
     }
 
-    //member/list.do -> MemberService -> MemberDAO -> MyBatis(memberMapper) -> DB
-    //localhost:8093/member/list.do
     @RequestMapping(value="list.do", method = RequestMethod.GET)
     public String usersList(Model model) throws Exception {
         List<UsersDTO> usersList = usersService.usersList();
         model.addAttribute("usersList", usersList);
         return "users/usersList";
     }
-    /* 관리자 회원 정보 보기 */
+    // 관리자 회원 정보 보기
     @RequestMapping(value="getUsers.do", method = RequestMethod.GET)
     public String getMember(@RequestParam String id, Model model) throws Exception {
         UsersDTO users = usersService.getUsers(id);
         model.addAttribute("users", users);
         return "users/usersDetail";
     }
-    /* 일반회원 정보보기 */
+    // 일반회원 정보보기
     @RequestMapping(value="read.do", method = RequestMethod.GET)
     public String usersRead(Model model, HttpServletRequest request) throws Exception {
         String id = (String) session.getAttribute("sid");
@@ -68,17 +66,17 @@ public class UsersController {
         model.addAttribute("users", users);
         return "users/usersRead";
     }
-    //회원 가입 - 약관 동의 페이지 로딩
+    // 회원 가입 - 약관 동의 페이지 로딩
     @GetMapping("agree.do")
     public String getAgree(Model model) throws Exception {
         return "users/agree";
     }
-    //회원 가입 - 회원가입폼 페이지 로딩
+    // 회원 가입 - 회원가입폼 페이지 로딩
     @GetMapping("join.do")
     public String getJoin(Model model) throws Exception {
         return "users/usersInsert";
     }
-    //회원 가입 - Ajax로 아이디 중복 체크
+    // 회원 가입 - Ajax로 아이디 중복 체크
     @RequestMapping(value="idCheck.do", method=RequestMethod.POST)
     public void idCheck(HttpServletResponse response, HttpServletRequest request, Model model) throws Exception {
         String id = request.getParameter("id");
@@ -86,7 +84,7 @@ public class UsersController {
         UsersDTO dto = new UsersDTO();
         dto = usersService.getUsers(id);
 
-        if(dto!=null){	//이미 있는 아이디임
+        if(dto!=null){	//
             result = false;
         } else {
             result = true;
@@ -96,7 +94,7 @@ public class UsersController {
         PrintWriter out = response.getWriter();
         out.println(json.toString());
     }
-    //회원 가입 - 회원 가입 처리
+    // 회원 가입 - 회원 가입 처리
     @RequestMapping(value="insert.do", method = RequestMethod.POST)
     public String usersWrite(UsersDTO users, Model model) throws Exception {
         //비밀번호 암호화
@@ -106,12 +104,12 @@ public class UsersController {
         usersService.usersInsert(users);
         return "redirect:/";
     }
-    //로그인 폼 로딩
+    // 로그인 폼 로딩
     @RequestMapping("loginForm.do")
     public String usersLoginForm(Model model) throws Exception {
         return "users/loginForm";
     }
-    //로그인 	- 컨트롤러에서 세션 처리
+    // 로그인 	- 컨트롤러에서 세션 처리
     @RequestMapping(value="signin.do", method = RequestMethod.POST)
     public String usersSignin(@RequestParam String id, @RequestParam String pw, HttpServletRequest req, RedirectAttributes rttr) throws Exception {
         session.invalidate();
@@ -128,7 +126,7 @@ public class UsersController {
             return "redirect:loginForm.do";
         }
     }
-    //로그인 - Service에서 세션 처리
+    // 로그인 - Service에서 세션 처리
     @RequestMapping(value="login.do", method = RequestMethod.POST)
     public String usersLogin(UsersDTO mdto, HttpServletRequest req, RedirectAttributes rttr) throws Exception {
         boolean loginSuccess = usersService.login(req);
@@ -138,7 +136,7 @@ public class UsersController {
             return "redirect:loginForm.do";
         }
     }
-    //Ajax를 이용하는 방법
+    // Ajax를 이용하는 방법
     @RequestMapping(value="loginCheck.do", method = RequestMethod.POST)
     public String usersLoginCtrl(UsersDTO mdto, RedirectAttributes rttr) throws Exception {
         session.getAttribute("users");
@@ -156,7 +154,7 @@ public class UsersController {
             return "redirect:loginForm.do";
         }
     }
-    //회원 정보 변경
+    // 회원 정보 변경
     @RequestMapping(value="update.do", method = RequestMethod.POST)
     public String usersUpdate(UsersDTO mdto, Model model) throws Exception {
         String pwd = pwdEncoder.encode(mdto.getPw());
@@ -164,14 +162,14 @@ public class UsersController {
         usersService.usersUpdate(mdto);
         return "redirect:/";
     }
-    //회원 탈퇴
+    // 회원 탈퇴
     @RequestMapping(value="delete.do", method = RequestMethod.GET)
     public String usersDelete(@RequestParam String id, Model model, HttpSession session) throws Exception {
         usersService.usersDelete(id);
         session.invalidate();
         return "redirect:/";
     }
-    //로그아웃
+    // 로그아웃
     @RequestMapping("logout.do")
     public String usersLogout(HttpSession session) throws Exception {
         session.invalidate();

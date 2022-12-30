@@ -6,7 +6,7 @@
 		select * from users
 	</select>
 
-	<select id="getusers" resultType="kr.go.mfds.dto.UsersDTO">
+	<select id="getUsers" resultType="kr.go.mfds.dto.UsersDTO">
 		select * from users where id=#{id}
 	</select>
 	<!-- 로그인 -->
@@ -23,7 +23,7 @@
 	</select>
 	<!-- 회원가입 -->
 	<insert id="usersInsert" parameterType="kr.go.mfds.dto.UsersDTO">
-		insert into users values (#{id}, #{pw}, #{name})
+		insert into users(id, pw, name) values (#{id}, #{pw}, #{name})
 	</insert>
 	<!-- 회원정보변경 -->
 	<update id="usersUpdate" parameterType="kr.go.mfds.dto.UsersDTO">

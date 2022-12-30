@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>회원가입</title>
-    <jsp:include page="${path1}include/head.jsp"></jsp:include>
+    <jsp:include page="../include/head.jsp"></jsp:include>
 </head>
 <body>
     <%-- 네비게이션 --%>
-    <jsp:include page="${path1}include/header.jsp"></jsp:include>
+    <jsp:include page="../include/header.jsp"></jsp:include>
     <div content="content">
         <div class="row column text-center">
             <h2>회원가입</h2>
@@ -64,62 +64,62 @@
                     </table>
                 </form>
                 <script>
-                    $(document).ready(function (){
-                       $("#id").keyup(function (){
-                          $("#idck").val("no");
-                          if($(this).val()!=""){
-                              $("#msg").html("<strong>아이디 입력중입니다.</strong>");
-                          }else{
-                              $("#msg").html("아이디 중복 체크를 진행해주시길 바랍니다.");
-                          }
-                       });
-                    });
+                $(document).ready(function (){
+                   $("#id").keyup(function (){
+                      $("#idck").val("no");
+                      if($(this).val()!=""){
+                          $("#msg").html("<strong>아이디 입력중입니다.</strong>");
+                      }else{
+                          $("#msg").html("아이디 중복 체크를 진행해주시길 바랍니다.");
+                      }
+                   });
+                });
                 </script>
                 <script>
-                    function idCheck(){
-                        if($("#id").val()==""){
-                            alert("아이디 입력을 하지 않았습니다.");
-                            $("#id").focus();
-                            return;
-                        }
-                        var params = {id : $("#id").val()}
-                        $.ajax({
-                            url:"${path1}/users/idCheck.do",
-                            type:"post",
-                            dataType:"json",
-                            data:params,
-                            success:function (result){
-                                console.log(result.result);
-                                var idChk = result.result;
-                                if(idChk==false){
-                                    $("#idck").val("no");
-                                    $("#msg").html("<strong style='color: red'>중복된 아이디 입니다.</strong>");
-                                    $("#id").focus();
-                                } else if(idChk==true) {
-                                    $("#idck").val("yes");
-                                    $("#msg").html("<strong style='color: blue'>사용가능한 아이디 입니다.</strong>");
-                                } else if(idck==""){
-                                    $("#msg").html("<strong>아이디가 확인되지 않았습니다. 다시 시도해주시길 바랍니다.</strong>");
-                                }
+                function idCheck(){
+                    if($("#id").val()==""){
+                        alert("아이디 입력을 하지 않았습니다.");
+                        $("#id").focus();
+                        return;
+                    }
+                    var params = {id : $("#id").val()}
+                    $.ajax({
+                        url:"${path1}/users/idCheck.do",
+                        type:"post",
+                        dataType:"json",
+                        data:params,
+                        success:function (result){
+                            console.log(result.result);
+                            var idChk = result.result;
+                            if(idChk==false){
+                                $("#idck").val("no");
+                                $("#msg").html("<strong style='color: red'>중복된 아이디 입니다.</strong>");
+                                $("#id").focus();
+                            } else if(idChk==true) {
+                                $("#idck").val("yes");
+                                $("#msg").html("<strong style='color: blue'>사용가능한 아이디 입니다.</strong>");
+                            } else if(idck==""){
+                                $("#msg").html("<strong>아이디가 확인되지 않았습니다. 다시 시도해주시길 바랍니다.</strong>");
                             }
-                        });
-                    }
-                    function joinCheck(f){
-                        if(f.pw.value!=f.pw2.value){
-                            alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
-                            f.pw.focus();
-                            return false;
                         }
-                        if(f.idck.value!="yes"){
-                            alert("아이디 중복 체크를 하지 않았습니다.");
-                            return false;
-                        }
+                    });
+                }
+                function joinCheck(f){
+                    if(f.pw.value!=f.pw2.value){
+                        alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+                        f.pw.focus();
+                        return false;
                     }
+                    if(f.idck.value!="yes"){
+                        alert("아이디 중복 체크를 하지 않았습니다.");
+                        return false;
+                    }
+                }
                 </script>
             </div>
         </div>
     </div>
     <%-- 하단푸터 --%>
-    <jsp:include page="${path1}include/footer.jsp"></jsp:include>
+    <jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

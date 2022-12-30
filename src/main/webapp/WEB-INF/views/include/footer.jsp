@@ -24,3 +24,8 @@
     </div>
   </div>
 </footer>
+<script>
+  $(document).ready(function(){
+    $(document).foundation();
+  });
+</script>
