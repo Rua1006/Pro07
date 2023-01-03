@@ -10,9 +10,10 @@
   .menu a {color: #fff3d9}
   .dropdown a {color : #fff3d9}
   .dropdown.menu > li.is-dropdown-submenu-parent > a::after {border-color: #fff3d9 transparent transparent;}
+  .mfds_logo {width: 250px;}
 </style>
 <header>
-  <a href="${path1}/"><img src="${path1}/resources/img/mfds_logo.png" alt="mfds_logo"></a>
+  <a href="${path1}/"><img src="${path1}/resources/img/mfds_logo.png" alt="mfds_logo" class="mfds_logo"></a>
   <!-- 콘텐츠 메뉴 nav 좌측 -->
   <div class="top-bar">
     <div class="top-bar-left">
