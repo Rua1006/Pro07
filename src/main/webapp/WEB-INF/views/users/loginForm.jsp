@@ -11,13 +11,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>로그인</title>
   <jsp:include page="../include/head.jsp"></jsp:include>
+  <style>
+    .login_tit {padding-top: 100px;}
+    .content {height: 750px; background-image: url("${path1}/resources/img/main/main_bg_02.jpg");}
+    .table_form_wrap {display: flex; flex-wrap: wrap; width: 500px; margin: 0 auto;}
+    .button {margin-right: 20px;}
+  </style>
 </head>
 <body>
   <%-- 네비게이션 --%>
   <jsp:include page="../include/header.jsp"></jsp:include>
   <div class="content">
-    <div class="row colum text-center">
-      <h2>로그인</h2>
+    <div class="colum text-center">
+      <h2 class="login_tit">로그인</h2>
       <div class="container">
         <c:if test="${!empty msg}">
           <script>

@@ -7,9 +7,11 @@
 <style>
   .top-bar {background-color : midnightblue;}
   .top-bar ul {background-color : midnightblue;}
-  .menu a {color: #fff3d9}
-  .dropdown a {color : #fff3d9}
-  .dropdown.menu > li.is-dropdown-submenu-parent > a::after {border-color: #fff3d9 transparent transparent;}
+  .menu a {color: #ffffff}
+  .dropdown a {color : #ffffff}
+  .dropdown.menu > li.is-dropdown-submenu-parent > a::after {border-color: #ffffff transparent transparent;}
+  .is-dropdown-submenu-item {background-color: #ffffff;}
+  .submenu-item {color: midnightblue !important;}
   .mfds_logo {width: 250px;}
 </style>
 <header>
@@ -21,34 +23,34 @@
         <li>
           <a href="">정보공개</a>
           <ul class="menu">
-            <li><a href="#">정보공개 목록</a></li>
-            <li><a href="#">예산결산정보 공개</a></li>
-            <li><a href="#">주요위원회</a></li>
+            <li><a href="#" class="submenu-item">정보공개 목록</a></li>
+            <li><a href="#" class="submenu-item">예산결산정보 공개</a></li>
+            <li><a href="#" class="submenu-item">주요위원회</a></li>
           </ul>
         </li>
         <li>
           <a href="#">국민소통</a>
           <ul class="menu">
-            <li><a href="#">자유게시판</a></li>
-            <li><a href="${path1}/qna/list.do">질의응답</a></li>
-            <li><a href="#">국민신문고</a></li>
-            <li><a href="#">적극행정</a></li>
+            <li><a href="#" class="submenu-item">자유게시판</a></li>
+            <li><a href="${path1}/qna/list.do" class="submenu-item">질의응답</a></li>
+            <li><a href="#" class="submenu-item">국민신문고</a></li>
+            <li><a href="#" class="submenu-item">통화상담</a></li>
           </ul>
         </li>
         <li>
           <a href="${path1}/notice/list.do">알림</a>
           <ul class="menu">
-            <li><a href="${path1}/notice/list.do">공지/공고</a></li>
-            <li><a href="#">언론홍보자료</a></li>
-            <li><a href="#">공시송달</a></li>
+            <li><a href="${path1}/notice/list.do" class="submenu-item">공지/공고</a></li>
+            <li><a href="#" class="submenu-item">언론홍보자료</a></li>
+            <li><a href="#" class="submenu-item">공시송달</a></li>
           </ul>
         </li>
         <li>
           <a href="#">식약처 소개</a>
           <ul class="menu">
-            <li><a href="#">비전·슬로건</a></li>
-            <li><a href="#">연혁</a></li>
-            <li><a href="#">조직도,부서</a></li>
+            <li><a href="#" class="submenu-item">비전·슬로건</a></li>
+            <li><a href="#" class="submenu-item">연혁</a></li>
+            <li><a href="#" class="submenu-item">조직도,부서</a></li>
           </ul>
         </li>
       </ul>
