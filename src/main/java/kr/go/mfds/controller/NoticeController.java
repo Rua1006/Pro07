@@ -21,7 +21,7 @@ public class NoticeController {
     NoticeService noticeService;
 //  공지사항 목록
     @GetMapping("list.do")
-    public String noticeList(Model model) throws Exception{
+    public String noticeList(Model model) throws Exception {
         List<NoticeDTO> noticeList = noticeService.noticeList();
         model.addAttribute("noticeList", noticeList);
         return "notice/noticeList";

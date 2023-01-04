@@ -74,7 +74,7 @@
                         <a href="${path1}/notice/list.do" class="circle_text1">공지</a>
                     </div>
                     <div class="circle_box2">
-                        <a href="#" class="circle_text2">보도자료</a>
+                        <a href="${path1}/news/list.do" class="circle_text2">보도자료</a>
                     </div>
                     <div class="circle_box3">
                         <a href="#" class="circle_text3">통화상담예약</a>

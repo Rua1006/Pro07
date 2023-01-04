@@ -11,13 +11,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>공지사항</title>
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .content {height: 900px;}
+        .notiDetail_tit {padding-top: 50px;}
+        .bd_wrap {margin: 12px auto; padding-left: 270px; padding-right: 270px;}
+        .button-group {float: right;}
+    </style>
 </head>
 <body>
 <%-- 네비게이션 --%>
 <jsp:include page="../include/header.jsp"></jsp:include>
 <%-- 테이블 메인 --%>
-<div class="content row column text-center" >
-    <h2>공지사항</h2>
+<div class="content column text-center" >
+    <h2 class="notiDetail_tit">공지</h2>
     <div class="bd_wrap">
         <table>
             <tbody>

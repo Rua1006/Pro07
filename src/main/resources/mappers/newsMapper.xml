@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="news">
+    <!-- 공지사항 목록 -->
+    <select id="newsList" resultType="kr.go.mfds.dto.NewsDTO">
+        select * from news
+    </select>
+    <!-- 공지사항 자세히보기 -->
+    <select id="getNews" resultType="kr.go.mfds.dto.NewsDTO">
+        select * from news where no=#{no}
+    </select>
+    <!--  공지사항 작성하기 -->
+    <insert id="newsInsert" parameterType="kr.go.mfds.dto.NewsDTO">
+        insert into news(title, content, author) values(#{title}, #{content}, '관리자')
+    </insert>
+    <!-- 공지사항 수정하기 -->
+    <update id="newsUpdate" parameterType="kr.go.mfds.dto.NewsDTO">
+        update news set title=#{title}, content=#{content} where no=#{no}
+    </update>
+    <!-- 공지사항 삭제하기 -->
+    <delete id="newsDelete" parameterType="kr.go.mfds.dto.NewsDTO">
+        delete from news where no=#{no}
+    </delete>
+</mapper>

@@ -41,7 +41,7 @@
           <a href="${path1}/notice/list.do">알림</a>
           <ul class="menu">
             <li><a href="${path1}/notice/list.do" class="submenu-item">공지/공고</a></li>
-            <li><a href="#" class="submenu-item">언론홍보자료</a></li>
+            <li><a href="${path1}/news/list.do" class="submenu-item">언론홍보자료</a></li>
             <li><a href="#" class="submenu-item">공시송달</a></li>
           </ul>
         </li>

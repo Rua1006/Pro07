@@ -9,15 +9,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>공지사항 작성하기</title>
+  <title>공지 작성</title>
   <jsp:include page="../include/head.jsp"></jsp:include>
+  <style>
+    input {margin: 0;}
+
+    .content {height: 900px;}
+    .notiInsert_tit {padding-top: 50px;}
+    .insertForm {width: 1000px; margin: 0 auto;}
+    .button-group {flex-direction: row-reverse;}
+    .button {border-radius: 10px; width: 100px; height: 50px;}
+    .list_go {text-align: center; padding: 17px; margin-right: 10px;}
+  </style>
 </head>
 <body>
 <%-- 네비게이션 --%>
 <jsp:include page="../include/header.jsp"></jsp:include>
-<div class="content row column text-center">
-  <h2>공지사항 작성</h2>
-  <form action="${path1}/notice/insert.do" method="post">
+<div class="content column text-center">
+  <h2 class="notiInsert_tit">공지 작성</h2>
+  <form action="${path1}/notice/insert.do" class="insertForm" method="post">
     <table>
       <tbody>
         <tr>
@@ -42,7 +52,7 @@
     </table>
     <div class="button-group">
       <input type="submit" class="submit success button" value="등록">
-      <a href="${path1}/notice/list.do" class="button">목록</a>
+      <a href="${path1}/notice/list.do" class="button list_go">목록</a>
     </div>
   </form>
 </div>
