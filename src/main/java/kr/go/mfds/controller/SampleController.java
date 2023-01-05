@@ -54,7 +54,4 @@ public class SampleController {
 		}
 		return lst;
 	}
-
-
-
 }

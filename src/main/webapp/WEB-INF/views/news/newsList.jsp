@@ -24,6 +24,10 @@
     <h2 class="news_tit">언론홍보</h2>
     <div class="bd_wrap">
 
+
+
+
+
     </div>
 </div>
 <%-- 하단푸터 --%>

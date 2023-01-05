@@ -8,6 +8,9 @@
   <meta name="keywords" content="식품의약품안전처"/>
   <meta name="description" content=""/>
 
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
   <link href="${path1}/resources/img/favicon/favicon.ico" type="image/x-icon" rel="shortcut icon" />
   <link rel="apple-touch-icon-precomposed" sizes="192x192" href="/mfds/images/inc/mfds192x192.png">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/mfds/images/inc/mfds144x144.png">
