@@ -7,11 +7,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/sample/")
@@ -34,4 +35,26 @@ public class SampleController {
 		model.addAttribute("sample", sample);
 		return "sample/getSample";
 	}
+
+	@ResponseBody
+	@GetMapping("test2/{id}/{pw}")
+	public Map<String, String> test2(@PathVariable("id") String id, @PathVariable("pw") String pw)  throws Exception {
+		Map<String, String> res = new HashMap<>();
+		res.put(id, pw);
+
+		return res;
+	}
+
+	@ResponseBody
+	@GetMapping("test3/{id}")
+	public List<String> test3(@PathVariable("id") String id){
+		List<String> lst = new ArrayList<String>();
+		for (int i=0; i<5; i++){
+			lst.add(id+i);
+		}
+		return lst;
+	}
+
+
+
 }
