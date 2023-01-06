@@ -13,6 +13,22 @@
     <jsp:include page="../include/head.jsp"></jsp:include>
     <style>
         .content {width: 1200px; margin: 0 auto;}
+
+        .history_tit {text-align: center; margin-top: 100px; margin-bottom: 30px;}
+        .tabs {text-align: center; margin: 0 auto;}
+        .history_year {text-align: center; font-size: 35px;}
+        .content_sub_title {border-left: 5px solid red; padding-left: 10px; margin-bottom: 50px; font-size: 30px;}
+        .content_o {display: flex; justify-content: space-between; margin-bottom: 40px;}
+        .content_guide {width: 830px;}
+        .content_guide_tit {border-left: 5px solid blue; padding-left: 10px;}
+        .content_t {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;}
+        .content_sub_year {border-left: 5px solid red; padding-left: 10px; width: 100px; margin: 0; height: 35px;}
+
+        .vision {border-left: 5px solid red; padding-left: 10px; height: 35px;}
+
+        #panel1 {font-size: 20px;}
+        #panel2 {font-size: 20px;}
+
     </style>
 </head>
 <body>
