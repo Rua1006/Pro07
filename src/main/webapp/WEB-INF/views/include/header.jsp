@@ -49,7 +49,7 @@
           <a href="#">식약처 소개</a>
           <ul class="menu">
             <li><a href="${path1}/inform/vision.do" class="submenu-item">비전·슬로건</a></li>
-            <li><a href="#" class="submenu-item">연혁</a></li>
+            <li><a href="${path1}/inform/history.do" class="submenu-item">연혁</a></li>
             <li><a href="#" class="submenu-item">조직도,부서</a></li>
           </ul>
         </li>

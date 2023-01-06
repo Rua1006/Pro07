@@ -23,11 +23,32 @@
 <div class="content column text-center">
     <h2 class="news_tit">언론홍보</h2>
     <div class="bd_wrap">
-
-
-
-
-
+        <table>
+            <thead>
+            <tr>
+                <th>글번호</th>
+                <th>제목</th>
+                <th>작성일</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${newsList}" var="news" varStatus="status">
+                <tr>
+                    <td>${status.count}</td>
+                    <td><a href="/news/detail.do?no=${news.no}">${news.title}</a></td>
+                    <td>
+                        <fmt:parseDate value="${news.resdate}" var="resdate" pattern="yyyy-MM-dd HH:mm:ss"/>
+                        <fmt:formatDate value="${resdate}" pattern="yyyy-MM-dd"/>
+                    </td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+    </div>
+    <div class="button_group">
+        <c:if test="${sid eq 'admin'}">
+            <a href="${path1}/news/insert.do">작성하기</a>
+        </c:if>
     </div>
 </div>
 <%-- 하단푸터 --%>

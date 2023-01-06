@@ -9,49 +9,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>공지</title>
+  <title>언론홍보자료</title>
   <jsp:include page="../include/head.jsp"></jsp:include>
   <style>
     .content {height: 900px;}
-    .notice_tit {padding-top: 50px;}
-    .bd_wrap {margin: 12px auto; padding-left: 270px; padding-right: 270px;}
-    .button-group {float: right;}
   </style>
 </head>
 <body>
 <%-- 네비게이션 --%>
 <jsp:include page="../include/header.jsp"></jsp:include>
-<%-- 테이블 메인 --%>
 <div class="content column text-center">
-  <h2 class="notice_tit">공지</h2>
+  <h2 class="newsDetail_tit">언론홍보자료</h2>
   <div class="bd_wrap">
     <table>
-      <thead>
-      <tr>
-        <th>글번호</th>
-        <th>제목</th>
-        <th>작성일</th>
-        <th>작성자</th>
-      </tr>
-      </thead>
       <tbody>
-      <c:forEach items="${noticeList}" var="notice" varStatus="status">
         <tr>
-          <td>${status.count}</td>
-          <td><a href="/notice/detail.do?no=${notice.no}">${notice.title}</a></td>
-          <td>
-            <fmt:parseDate value="${notice.resdate}" var="resdate" pattern="yyyy-MM-dd HH:mm:ss"/>
-            <fmt:formatDate value="${resdate}" pattern="yyyy-MM-dd"></fmt:formatDate>
-          </td>
-          <td>${notice.author}</td>
+          <th>글번호</th>
+          <td>${news.no}</td>
         </tr>
-      </c:forEach>
+        <tr>
+          <th>글제목</th>
+          <td>${news.title}</td>
+        </tr>
+        <tr>
+          <th>글내용</th>
+          <td>${news.content}</td>
+        </tr>
+        <tr>
+          <th>작성자</th>
+          <td>${news.author}</td>
+        </tr>
+        <tr>
+          <th>작성일</th>
+          <td>${news.resdate}</td>
+        </tr>
       </tbody>
     </table>
-    <div class="button-group">
+    <div class="button_group">
       <c:if test="${sid eq 'admin'}">
-      <a href="${path1}/notice/insert.do">작성하기</a>
+        <a href="${path1}/news/update.do?no=${news.no}" class="button">글 수정</a>
+        <a href="${path1}/news/delete.do?no=${news.no}" class="button">글 삭제</a>
       </c:if>
+      <a href="${path1}/news/list.do" class="button">글 목록</a>
     </div>
   </div>
 </div>
