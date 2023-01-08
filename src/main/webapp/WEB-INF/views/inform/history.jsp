@@ -17,14 +17,15 @@
         .history_tit {text-align: center; margin-top: 100px; margin-bottom: 30px;}
         .tabs {text-align: center; margin: 0 auto;}
         .history_year {text-align: center; font-size: 35px;}
-        .content_sub_title {border-left: 5px solid red; padding-left: 10px; margin-bottom: 50px; font-size: 30px;}
-        .content_o {display: flex; justify-content: space-between; margin-bottom: 40px;}
-        .content_guide {width: 830px;}
+        .content_sub_title {border-left: 5px solid red; padding-left: 10px; margin-left: 120px; margin-bottom: 50px; font-size: 30px;}
+        .content_o {display: flex; justify-content: center; margin-bottom: 40px;}
+        .content_guide {width: 830px; margin-bottom: 60px;}
         .content_guide_tit {border-left: 5px solid blue; padding-left: 10px;}
-        .content_t {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;}
+        .content_t {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;}
         .content_sub_year {border-left: 5px solid red; padding-left: 10px; width: 100px; margin: 0; height: 35px;}
-
-        .vision {border-left: 5px solid red; padding-left: 10px; height: 35px;}
+        .content_table > th {width: 200px;}
+        .tabs-title > a {font-size: 25px;}
+        .vision {border-left: 5px solid red; padding-left: 10px; height: 35px; margin-right: 30px;}
 
         #panel1 {font-size: 20px;}
         #panel2 {font-size: 20px;}
@@ -73,7 +74,6 @@
                         <h5 class="content_guide_tit">30차</h5>
                         <div class="content_table">
                             <table>
-                                <caption>개정일자, 주요내용, 정원안내</caption>
                                 <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -98,7 +98,6 @@
                         <h5 class="content_guide_tit">29차</h5>
                         <div class="content_table">
                             <table>
-                                <caption>개정일자, 주요내용, 정원안내</caption>
                                 <tbody>
                                 <tr>
                                     <th>개정일자</th>
@@ -124,7 +123,6 @@
                             <h5 class="content_guide_tit">28차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -149,7 +147,6 @@
                             <h5 class="content_guide_tit">27차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -173,7 +170,6 @@
                             <h5 class="content_guide_tit">26차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -197,7 +193,6 @@
                             <h5 class="content_guide_tit">25차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -226,7 +221,6 @@
                             <h5 class="content_guide_tit">24차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -250,7 +244,6 @@
                             <h5 class="content_guide_tit">23차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -274,7 +267,6 @@
                             <h5 class="content_guide_tit">22차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -330,7 +322,6 @@
                         <h5 class="content_guide_tit">21차</h5>
                         <div class="content_table">
                             <table>
-                                <caption>개정일자, 주요내용, 정원안내</caption>
                                 <tbody>
                                 <tr>
                                     <th>개정일자</th>
@@ -354,7 +345,6 @@
                         <h5 class="content_guide_tit">20차</h5>
                         <div class="content_table">
                             <table>
-                                <caption>개정일자, 주요내용, 정원안내</caption>
                                 <tbody>
                                 <tr>
                                     <th>개정일자</th>
@@ -376,7 +366,6 @@
                         <h5 class="content_guide_tit">19차</h5>
                         <div class="content_table">
                             <table>
-                                <caption>개정일자, 주요내용, 정원안내</caption>
                                 <tbody>
                                 <tr>
                                     <th>개정일자</th>
@@ -401,7 +390,6 @@
                         <h5 class="content_guide_tit">18차</h5>
                         <div class="content_table">
                             <table>
-                                <caption>개정일자, 주요내용, 정원안내</caption>
                                 <tbody>
                                 <tr>
                                     <th>개정일자</th>
@@ -430,7 +418,6 @@
                             <h5 class="content_guide_tit">17차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -454,7 +441,6 @@
                             <h5 class="content_guide_tit">16차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -478,7 +464,6 @@
                             <h5 class="content_guide_tit">15차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -503,7 +488,6 @@
                             <h5 class="content_guide_tit">14차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -532,7 +516,6 @@
                             <h5 class="content_guide_tit">13차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -556,7 +539,6 @@
                             <h5 class="content_guide_tit">12차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -580,7 +562,6 @@
                             <h5 class="content_guide_tit">11차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>
@@ -604,7 +585,6 @@
                             <h5 class="content_guide_tit">10차</h5>
                             <div class="content_table">
                                 <table>
-                                    <caption>개정일자, 주요내용, 정원안내</caption>
                                     <tbody>
                                     <tr>
                                         <th>개정일자</th>

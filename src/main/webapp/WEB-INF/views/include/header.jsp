@@ -32,7 +32,7 @@
           <a href="#">국민소통</a>
           <ul class="menu">
             <li><a href="#" class="submenu-item">자유게시판</a></li>
-            <li><a href="${path1}/qna/list.do" class="submenu-item">질의응답</a></li>
+            <li><a href="${path1}/qna/list.do" class="submenu-item">국민제안</a></li>
             <li><a href="#" class="submenu-item">국민신문고</a></li>
             <li><a href="#" class="submenu-item">통화상담</a></li>
           </ul>

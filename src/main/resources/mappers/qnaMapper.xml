@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qnaBoard">
+    <!-- 질문 및 답변 리스트 -->
+    <select id="qnaList" resultType="kr.go.mfds.dto.QnaBoardDTO">
+        select * from qnaboard where lev = 0
+    </select>
+    <!-- 질문 및 답변 상세보기(질문 답변 모두 상세보기) -->
+    <select id="qnaDetail" resultType="kr.go.mfds.dto.QnaBoardDTO">
+        select * from qnaboard where pos =#{pos}
+    </select>
+    <!-- 상세보기 -->
+    <select id="questDetail" resultType="kr.go.mfds.dto.QnaBoardDTO">
+        select * from qnaboard where qno =#{qno}
+    </select>
+    <!-- 질문 및 답변 수정 -->
+    <update id="qnaUpdate" parameterType="kr.go.mfds.dto.QnaBoardDTO">
+        update qnaboard set title=#{title}, content=#{content} where qno=#{qno}
+    </update>
+    <!-- 질문 작성 -->
+    <insert id="questInsert" parameterType="kr.go.mfds.dto.QnaBoardDTO">
+        insert into qnaboard(title, content, author, lev, pos) values(#{title}, #{content}, #{author}, #{lev}, (select a.qno+1 from(select max(qno) qno from qnaboard where lev=0)a))
+    </insert>
+    <!-- 답변 작성 -->
+    <insert id="ansInsert" parameterType="kr.go.mfds.dto.QnaBoardDTO">
+        insert into qnaboard(title, content, author, lev, pos) values(#{title}, #{content}, #{author}, #{lev}, #{pos})
+    </insert>
+    <!-- 글 삭제 -->
+    <delete id="qnaDel" parameterType="kr.go.mfds.dto.QnaBoardDTO">
+        delete from qnaboard where qno=#{qno}
+    </delete>
+</mapper>

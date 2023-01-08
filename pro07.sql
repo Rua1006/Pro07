@@ -41,21 +41,22 @@ insert into freeboard(title, content, author) values ('자유테스트','자유�
 select * from freeboard;
 
 -- 질의응답 게시판 (자동증가 번호, 제목, 내용, 작성자, 작성일, 비밀글여부, 질문답변구분)
-create table qnaboard (
-	no int primary key auto_increment,
-    title varchar(1000) not null,
-    content varchar(2000) not null,
-    author varchar(100),
+create table qnaboard(
+	qno int primary key auto_increment,
+    title varchar(200) not null,
+    content varchar(1000) not null,
+	author varchar(50) not null,
     resdate datetime default now(),
-	lev int default 0,     
-    sec char(1)
+    lev int default 0,
+    pos int
 );
+
 desc qnaboard;
 -- 더미데이터 삽입
 -- 질문 
-insert into qnaboard(title, content, author, lev, sec) values('질문테스트','질문테스트내용','dumy',0,'0'); 
+insert into qnaboard(title, content, author, lev, pos) values('질문테스트','질문테스트내용','dumy',0,'0'); 
 -- 답변
-insert into qnaboard(title, content, author, lev, sec) values('답변테스트','답변내용테스트','admin','1','0');
+insert into qnaboard(title, content, author, lev, pos) values('답변테스트','답변내용테스트','admin','1','0');
 select * from qnaboard;
 
 commit;
