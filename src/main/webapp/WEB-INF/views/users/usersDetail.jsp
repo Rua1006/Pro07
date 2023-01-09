@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>공지</title>
+  <title>회원목록</title>
   <jsp:include page="../include/head.jsp"></jsp:include>
   <style>
     .content {height: 900px;}
@@ -29,44 +29,34 @@
 <nav aria-label="You are here:" role="navigation" class="bread">
   <ul class="breadcrumbs">
     <li><a href="${path1}/">Home</a></li>
-    <li><a href="${path1}/inform/vision.do">알림</a></li>
+    <li class="disabled">마이페이지</li>
     <li>
-      <span class="show-for-sr">Current: </span> 공지/공고
+      <span class="show-for-sr">Current: </span> 회원정보
     </li>
   </ul>
 </nav>
 <%-- 테이블 메인 --%>
 <div class="content column text-center">
-  <h2 class="notice_tit">공지</h2>
+  <h2 class="notice_tit">회원목록</h2>
   <div class="bd_wrap">
     <table>
       <thead>
       <tr>
-        <th>글번호</th>
-        <th>제목</th>
-        <th>작성일</th>
-        <th>작성자</th>
+        <th>번호</th>
+        <th>아이디</th>
+        <th>이름</th>
       </tr>
       </thead>
       <tbody>
-      <c:forEach items="${noticeList}" var="notice" varStatus="status">
+      <c:forEach items="${usersList}" var="users" varStatus="status">
         <tr>
           <td>${status.count}</td>
-          <td><a href="/notice/detail.do?no=${notice.no}">${notice.title}</a></td>
-          <td>
-            <fmt:parseDate value="${notice.resdate}" var="resdate" pattern="yyyy-MM-dd HH:mm:ss"/>
-            <fmt:formatDate value="${resdate}" pattern="yyyy-MM-dd"></fmt:formatDate>
-          </td>
-          <td>${notice.author}</td>
+          <td><a href="/users/detail.do?no=${users.no}">${users.id}</a></td>
+          <td>${users.name}</td>
         </tr>
       </c:forEach>
       </tbody>
     </table>
-    <div class="button-group">
-      <c:if test="${sid eq 'admin'}">
-      <a href="${path1}/notice/insert.do">작성하기</a>
-      </c:if>
-    </div>
   </div>
 </div>
 <%-- 하단푸터 --%>

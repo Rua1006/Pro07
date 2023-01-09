@@ -80,7 +80,7 @@
                         <a href="#" class="circle_text3">통화상담예약</a>
                     </div>
                     <div class="circle_box4">
-                        <a href="#" class="circle_text4">조직도</a>
+                        <a href="${path1}/data/organization.do" class="circle_text4">조직도</a>
                     </div>
                 </div>
             </div>

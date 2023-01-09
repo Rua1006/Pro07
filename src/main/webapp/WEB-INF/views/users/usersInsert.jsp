@@ -11,12 +11,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>회원가입</title>
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .content {width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; padding: 50px; text-align: center; flex-direction: column;}
+
+        .bread {border-bottom: 0.01em solid rgba(25, 39, 112, 0.16); border-top: 0.01em solid rgba(25, 39, 112, 0.16); margin-top: 10px;}
+        .breadcrumbs {margin: 0; padding: 10px;}
+        .breadcrumbs > li  {font-size: 20px;}
+    </style>
 </head>
 <body>
     <%-- 네비게이션 --%>
     <jsp:include page="../include/header.jsp"></jsp:include>
-    <div content="content">
-        <div class="row column text-center">
+    <%-- 브래드크럼 --%>
+    <nav aria-label="You are here:" role="navigation" class="bread">
+        <ul class="breadcrumbs">
+            <li><a href="${path1}/">Home</a></li>
+            <li><a href="${path1}/users/agree.do">약관동의</a></li>
+            <li>
+                <span class="show-for-sr">Current: </span> 회원가입
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="column text-center">
             <h2>회원가입</h2>
             <div class="container">
                 <form action="${path1}/users/insert.do" method="post" onsubmit="return joinCheck(this)">

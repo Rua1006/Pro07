@@ -16,11 +16,24 @@
     .content {height: 750px; background-image: url("${path1}/resources/img/main/main_bg_02.jpg");}
     .table_form_wrap {display: flex; flex-wrap: wrap; width: 500px; margin: 0 auto;}
     .button {margin-right: 20px;}
+
+    .bread {border-bottom: 0.01em solid rgba(25, 39, 112, 0.16); border-top: 0.01em solid rgba(25, 39, 112, 0.16); margin-top: 10px;}
+    .breadcrumbs {margin: 0; padding: 10px;}
+    .breadcrumbs > li  {font-size: 20px;}
   </style>
 </head>
 <body>
   <%-- 네비게이션 --%>
   <jsp:include page="../include/header.jsp"></jsp:include>
+  <%-- 브래드크럼 --%>
+  <nav aria-label="You are here:" role="navigation" class="bread">
+    <ul class="breadcrumbs">
+      <li><a href="${path1}/">Home</a></li>
+      <li>
+        <span class="show-for-sr">Current: </span> 로그인
+      </li>
+    </ul>
+  </nav>
   <div class="content">
     <div class="colum text-center">
       <h2 class="login_tit">로그인</h2>

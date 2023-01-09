@@ -11,12 +11,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>회원정보</title>
   <jsp:include page="../include/head.jsp"></jsp:include>
+  <style>
+    .content {width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; padding: 50px; text-align: center; flex-direction: column;}
+
+    .bread {border-bottom: 0.01em solid rgba(25, 39, 112, 0.16); border-top: 0.01em solid rgba(25, 39, 112, 0.16); margin-top: 10px;}
+    .breadcrumbs {margin: 0; padding: 10px;}
+    .breadcrumbs > li  {font-size: 20px;}
+  </style>
 </head>
 <body>
 <%-- 네비게이션 --%>
 <jsp:include page="../include/header.jsp"></jsp:include>
-<div content="content">
-  <div class="row column text-center">
+<%-- 브래드크럼 --%>
+<nav aria-label="You are here:" role="navigation" class="bread">
+  <ul class="breadcrumbs">
+    <li><a href="${path1}/">Home</a></li>
+    <li>
+      <span class="show-for-sr">Current: </span> 마이페이지
+    </li>
+  </ul>
+</nav>
+<div class="content">
+  <div class="column text-center">
     <c:if test="${sid=='admin'}">
       <h2>회원 정보 수정</h2>
     </c:if>
@@ -37,7 +53,7 @@
               <th><label for="pw">비밀번호</label></th>
               <td>
                 <input type="password" name="pw" id="pw" placeholder="비밀번호 수정시 입력" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-                <p>*(비밀번호 수정 시 최소 8자리에서 최대 16자리까지, 숫자, 영문 대소문자, 특수문자가 각 1문자 이상 포함되어야 합니다.)</p>
+                <b style="color: darkred; font-size: 12px;">*(비밀번호 수정 시 최소 8자리에서 최대 16자리까지, 숫자, 영문 대소문자, 특수문자가 각 1문자 이상 포함되어야 합니다.)</b>
               </td>
             </tr>
             <tr>

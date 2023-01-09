@@ -27,14 +27,27 @@
         .tabs-title > a {font-size: 25px;}
         .vision {border-left: 5px solid red; padding-left: 10px; height: 35px; margin-right: 30px;}
 
+        .bread {border-bottom: 0.01em solid rgba(25, 39, 112, 0.16); border-top: 0.01em solid rgba(25, 39, 112, 0.16); margin-top: 10px;}
+        .breadcrumbs {margin: 0; padding: 10px;}
+        .breadcrumbs > li  {font-size: 20px;}
+
         #panel1 {font-size: 20px;}
         #panel2 {font-size: 20px;}
-
     </style>
 </head>
 <body>
 <%-- 네비게이션 --%>
 <jsp:include page="../include/header.jsp"></jsp:include>
+<%-- 브래드크럼 --%>
+<nav aria-label="You are here:" role="navigation" class="bread">
+    <ul class="breadcrumbs">
+        <li><a href="${path1}/">Home</a></li>
+        <li><a href="${path1}/inform/vision.do">식약처소개</a></li>
+        <li>
+            <span class="show-for-sr">Current: </span> 연혁
+        </li>
+    </ul>
+</nav>
 <div content="content" class="content column">
     <h2 class="history_tit">연혁</h2>
     <%-- 탭설정 --%>

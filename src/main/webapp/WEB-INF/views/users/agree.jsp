@@ -11,12 +11,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>회원가입</title>
   <jsp:include page="../include/head.jsp"></jsp:include>
+  <style>
+  .content {width: 900px; margin: 0 auto;}
+  .agree_tit {text-align: center; padding-top: 50px;}
+  .agree_fr {width: 900px; white-space:pre-wrap; margin: 10px auto; padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto;}
+
+  .bread {border-bottom: 0.01em solid rgba(25, 39, 112, 0.16); border-top: 0.01em solid rgba(25, 39, 112, 0.16); margin-top: 10px;}
+  .breadcrumbs {margin: 0; padding: 10px;}
+  .breadcrumbs > li  {font-size: 20px;}
+  </style>
 </head>
 <body>
   <%-- 네비게이션 --%>
   <jsp:include page="../include/header.jsp"></jsp:include>
+  <%-- 브래드크럼 --%>
+  <nav aria-label="You are here:" role="navigation" class="bread">
+    <ul class="breadcrumbs">
+      <li><a href="${path1}/">Home</a></li>
+      <li>
+        <span class="show-for-sr">Current: </span> 약관동의
+      </li>
+    </ul>
+  </nav>
   <div class="content container" id="content">
-    <h2 class="title">회원 약관 동의</h2>
+    <h2 class="agree_tit">회원 약관 동의</h2>
 <article class="agree_fr">
 <h2>제1장 총칙</h2>
 제1조(목적) 이 약관은 회사가 온라인으로 제공하는 디지털콘텐츠(이하 "콘텐츠"라고 한다) 및 제반서비스의 이용과 관련하여 회사와 이용자와의 권리, 의무 및 책임사항 등을 규정함을 목적으로 합니다.
@@ -315,9 +333,8 @@
 </article>
     <div class="form-check">
       <input type="checkbox" id="ck_item1" name="ck_item" class="form-check-input">
-      <label for="ck_item1" class="form-check-label">약관 동의</label>
+      <label for="ck_item1" class="form-check-label"><b>약관 동의</b></label>
     </div>
-    <br><br>
 <article class="agree_fr">
 제1장 총칙
 
@@ -902,9 +919,9 @@
 </article>
     <div class="form-check">
       <input type="checkbox" id="ck_item2" name="ck_item2" class="form-check-input">
-      <label for="ck_item2" class="form-check-label">개인정보처리방침 동의</label><br><br>
+      <label for="ck_item2" class="form-check-label"><b>개인정보처리방침 동의</b></label>
     </div>
-    <br><hr><br>
+    <hr>
     <div class="form-check">
       <input type="checkbox" id="ck_item3" name="ck_item3" class="form-check-input">
       <label for="ck_item3" class="form-check-label" onclick="protocol()"><strong>전체 약관 동의</strong></label>
@@ -912,6 +929,7 @@
     <div class="btn-group">
       <button type="button" id="in_btn" class="button is-info">정보 입력</button>
     </div>
+  </div>
     <script>
       var ck_item1 = document.getElementById("ck_item1");
       var ck_item2 = document.getElementById("ck_item2");

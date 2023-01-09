@@ -14,6 +14,8 @@
     <style>
         .content {height: 900px;}
         .news_tit {padding-top: 50px;}
+        .bd_wrap {margin: 12px auto; padding-left: 270px; padding-right: 270px;}
+        .button_group {float: right;}
     </style>
 </head>
 <body>

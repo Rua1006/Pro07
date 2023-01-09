@@ -59,7 +59,6 @@
       <a href="${path1}/qna/list.do" class="button list_go">목록</a>
     </div>
   </form>
-
 </div>
 <%-- 하단푸터 --%>
 <jsp:include page="../include/footer.jsp"></jsp:include>

@@ -53,7 +53,7 @@ public class UsersController {
     }
     // 관리자 회원 정보 보기
     @RequestMapping(value="getUsers.do", method = RequestMethod.GET)
-    public String getMember(@RequestParam String id, Model model) throws Exception {
+    public String getMember(@RequestParam("id") String id, Model model) throws Exception {
         UsersDTO users = usersService.getUsers(id);
         model.addAttribute("users", users);
         return "users/usersDetail";

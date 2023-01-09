@@ -17,10 +17,12 @@
         .vision {display: block; height: 50px; text-align: center; margin-right: 100px; margin-top: 55px; padding: 5px; border-left: 5px solid red;}
         .goal {margin-right: 240px; margin-left: -150px; margin-top: 15px; line-height: 45px; border-left: 5px solid red; height: 50px; padding: 5px;}
         .imp {border-left: 5px solid red; height: 50px; padding: 5px; margin-left: -150px;}
+        .slo {border-left: 5px solid red; height: 50px; padding: 5px; margin-left: 10px;}
 
         .vision2 {margin-left: 200px;}
         .content_sub:after {background-image: url("${path1}/resources/img/vision/cross.gif"); height: 50px; width: 50px; display: block; position: absolute; content: ''; background-repeat: no-repeat; margin-left: 225px; margin-top: 55px;}
         .vision_tit {padding-top: 50px;}
+        .vision_subTitle {display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 35px;}
         .bd_wrap {margin: 30px auto;}
         .content_o {display: flex; justify-content: space-evenly; flex-wrap: wrap;}
         .content_o:after {content:''; display: block; clear: both;}
@@ -29,16 +31,31 @@
         .content_goal {border: 0.1em solid #8a8a8a; padding: 30px; border-radius: 10px;}
         .content_th {display: flex; justify-content: space-evenly;}
         .content_guide2 {margin-right: 50px;}
+        .content_f {margin-right: 100px;}
 
         .vision_list {border-bottom: rgba(25, 39, 112, 0.16) 0.01em solid; text-align: left; }
         .guide_tit {background: url("${path1}/resources/img/vision/subtitle_check.gif") left 6px no-repeat; font-weight: bold; font-size: 19px; background-size: 10px; margin-right: 10px;}
         .guide_tit1 {background: url("${path1}/resources/img/vision/subtitle_check.gif") left 6px no-repeat; font-weight: bold; font-size: 19px; background-size: 10px; margin-right: 40px;}
         .vision_list > li:after {background-image: url("${path1}/resources/img/vision/list_icon01.jpg"); content: ''; height: 20px; width: 20px; display: block; background-repeat: no-repeat; position: absolute; margin-left: -23px; margin-top: -22px; background-size: 20px;}
+
+        .bread {border-bottom: 0.01em solid rgba(25, 39, 112, 0.16); border-top: 0.01em solid rgba(25, 39, 112, 0.16); margin-top: 10px;}
+        .breadcrumbs {margin: 0; padding: 10px;}
+        .breadcrumbs > li  {font-size: 20px;}
     </style>
 </head>
 <body>
 <%-- 네비게이션 --%>
 <jsp:include page="../include/header.jsp"></jsp:include>
+<%-- 브래드크럼 --%>
+<nav aria-label="You are here:" role="navigation" class="bread">
+    <ul class="breadcrumbs">
+        <li><a href="${path1}/">Home</a></li>
+        <li><a href="${path1}/inform/vision.do">식약처소개</a></li>
+        <li>
+            <span class="show-for-sr">Current: </span> 비전 슬로건
+        </li>
+    </ul>
+</nav>
 <div class="content column text-center">
     <h2 class="vision_tit">비전</h2>
     <div class="bd_wrap">
@@ -121,9 +138,8 @@
             </div>
         </div>
         <div class="vision_subTitle">
-            <h3>슬로건</h3>
+            <h3 class="slo">슬로건</h3>
             <div class="content_f">
-                <h4>이미지</h4>
                 <div class="content_guide2">
                     <ul class="content_sub2">
                         <li>

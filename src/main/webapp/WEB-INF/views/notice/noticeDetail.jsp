@@ -16,11 +16,26 @@
         .notiDetail_tit {padding-top: 50px;}
         .bd_wrap {margin: 12px auto; padding-left: 270px; padding-right: 270px;}
         .button-group {float: right;}
+
+        .bread {border-bottom: 0.01em solid rgba(25, 39, 112, 0.16); border-top: 0.01em solid rgba(25, 39, 112, 0.16); margin-top: 10px;}
+        .breadcrumbs {margin: 0; padding: 10px;}
+        .breadcrumbs > li  {font-size: 20px;}
     </style>
 </head>
 <body>
 <%-- 네비게이션 --%>
 <jsp:include page="../include/header.jsp"></jsp:include>
+<%-- 브래드크럼 --%>
+<nav aria-label="You are here:" role="navigation" class="bread">
+    <ul class="breadcrumbs">
+        <li><a href="${path1}/">Home</a></li>
+        <li><a href="${path1}/notice/list.do">알림</a></li>
+        <li class="disabled">공지/공고</li>
+        <li>
+            <span class="show-for-sr">Current: </span> 공지
+        </li>
+    </ul>
+</nav>
 <%-- 테이블 메인 --%>
 <div class="content column text-center" >
     <h2 class="notiDetail_tit">공지</h2>

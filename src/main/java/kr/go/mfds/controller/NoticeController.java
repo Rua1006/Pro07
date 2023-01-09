@@ -39,7 +39,7 @@ public class NoticeController {
         return "notice/noticeInsert";
     }
 //  공지사항 작성
-    @PostMapping("insert.do")
+        @PostMapping("insert.do")
     public String noticeInsert(HttpServletRequest request, Model model) throws Exception {
         NoticeDTO noti = new NoticeDTO();
         noti.setTitle(request.getParameter("title"));

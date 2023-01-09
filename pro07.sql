@@ -59,4 +59,13 @@ insert into qnaboard(title, content, author, lev, pos) values('질문테스트',
 insert into qnaboard(title, content, author, lev, pos) values('답변테스트','답변내용테스트','admin','1','0');
 select * from qnaboard;
 
+-- 뉴스 게시판(자동증가번호, 제목, 내용, 작성일, 작성자)
+create table news (
+	no int primary key auto_increment,
+    title varchar(200) not null,
+    content varchar(1000) not null,
+    resdate datetime default now(),
+    author varchar(100)
+);
+
 commit;
