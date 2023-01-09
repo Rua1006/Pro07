@@ -14,7 +14,7 @@
     <style>
         .content {width: 1200px; margin: 0 auto;}
 
-        .vision {display: block; height: 50px; text-align: center; margin-right: 100px; margin-top: 55px; padding: 5px; border-left: 5px solid red;}
+        .vision {display: block; height: 50px; text-align: center; margin-right:50px; margin-top: 55px; padding: 5px; border-left: 5px solid red;}
         .goal {margin-right: 240px; margin-left: -150px; margin-top: 15px; line-height: 45px; border-left: 5px solid red; height: 50px; padding: 5px;}
         .imp {border-left: 5px solid red; height: 50px; padding: 5px; margin-left: -150px;}
         .slo {border-left: 5px solid red; height: 50px; padding: 5px; margin-left: 10px;}

@@ -5,6 +5,7 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="path1" value="${pageContext.request.contextPath }" />
 <style>
+  * {font-family: 'Noto Sans KR', sans-serif !important;}
   .top-bar {background-color : midnightblue;}
   .top-bar ul {background-color : midnightblue;}
   .menu a {color: #ffffff}

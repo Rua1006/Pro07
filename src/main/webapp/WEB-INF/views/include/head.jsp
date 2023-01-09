@@ -18,6 +18,10 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/mfds/images/inc/mfds72x72.png">
   <link rel="apple-touch-icon-precomposed" href="/mfds/images/inc/mfds57x57.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="${path1}/resources/css/foundation.css">
   <link rel="stylesheet" href="${path1}/resources/css/app.css">
 
