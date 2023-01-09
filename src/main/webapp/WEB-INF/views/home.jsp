@@ -17,7 +17,7 @@
         .main4 {width: 380px; height: 235px; border-radius: 20px; margin: 20px;}
         .main5 {width: 380px; height: 235px; border-radius: 20px; margin: 20px;}
         .main6 {width: 380px; height: 235px; border-radius: 20px; margin: 20px;}
-        .orbit-container {margin-left: 362px !important; margin-right: 270px !important;}
+        .orbit-container {margin-left: 310px !important; margin-right: 270px !important;}
         .orbit {background-image: url("${path1}/resources/img/main/main_bg_01.jpg"); height: 840px;}
 
         .top_content {width: 1000px; height: 170px; margin: 45px auto; background-color: #ffffff; border-radius: 10px;}
