@@ -40,6 +40,9 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 🛠 DB 설계
 <img src="./readmeImg/erd.png">
 
+📜 메뉴 구성
+<img src="./readmeImg/menu.png">
+
 🎥 화면 구조(업데이트중)
 - 메인화면
 <img src="./readmeImg/main.png">
