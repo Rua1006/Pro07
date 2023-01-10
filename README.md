@@ -1,10 +1,22 @@
 # Pro07 (SpringLegacy Project)
 Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 
-📢 프로젝트 설명
-
+📢 프로젝트 설명<br>
+- 개인프로젝트<br>
+  - 정부중앙부처 식품의약품안전처를 주제로 진행한 개인프로젝트 <br>
+  Spring Legacy > Maven MVC<br>
+- 구현 목표<br>
+  - Controller, Model(DAO), DTO, EL, JSTL 등을 활용한 데이터 바인딩으로
+  공지사항 CRUD, QnA CRUD, ckEditor 기반 자유게시판 CRUD 구현
+  - Ajax 기반 아이디 중복확인
 
 ⚙ 개발 환경
+- 운영체제 : Windows-11
+- 통합개발환경(IDE) : Intellij, STS
+- JDK version : JDK 1.8
+- 데이터베이스 : MySQL
+- 빌드 툴 : Maven
+- 관리 툴 : GitHub
 
 💻 기술 스택
 - 백엔드<br>
