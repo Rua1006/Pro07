@@ -72,3 +72,8 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
   <img src="./readmeImg/organi.png">
 
 🕹 구현 기능 (작성중)
+- Controller, Model(DAO), DTO, EL, JSTL 등을 활용한 데이터 바인딩
+  - 공지 사항 CRUD
+  - QnA CRUD
+  - 회원 CRUD
+  - Ajax 아이디 중복확인
