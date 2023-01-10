@@ -47,16 +47,22 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 - 메인화면
 <img src="./readmeImg/main.png">
 
-- 로그인
-<img src="./readmeImg/login.png">
-- 회원가입(약관동의)
-<img src="./readmeImg/agree.png">
-- 회원가입(가입정보입력)
-<img src="./readmeImg/usersInsert.png">
-
+- 회원기능
+  - 로그인
+  <img src="./readmeImg/login.png">
+  - 회원가입(약관동의)
+  <img src="./readmeImg/agree.png">
+  - 회원가입(가입정보입력)
+  <img src="./readmeImg/usersInsert.png">
+  - 마이페이지
+  <img src="./readmeImg/mypage.png">
+  
 - 메뉴3(알림)
   - 공지
   <img src="./readmeImg/noticeList.png">
+  - 공지작성
+  <img src="./readmeImg/noticeInsert.png">
+  
 - 메뉴4(식약처소개)
   - 비전/슬로건
   <img src="./readmeImg/vision.png">
@@ -64,5 +70,5 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
   <img src="./readmeImg/history.png">
   - 조직도
   <img src="./readmeImg/organi.png">
- 
+
 🕹 구현 기능 (작성중)
