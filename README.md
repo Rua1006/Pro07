@@ -1,4 +1,4 @@
-# Pro07 (SpringLegacy Project)
+# SpringLegacy Project
 Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 
 📢 프로젝트 설명
