@@ -1,7 +1,7 @@
 # SpringLegacy Project
 Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 
-📢 프로젝트 설명
+**📢 프로젝트 설명**
 - 개인프로젝트<br>
   - 정부중앙부처 식품의약품안전처를 주제로 진행한 개인프로젝트 <br>
   Spring Legacy > Maven MVC<br>
@@ -10,7 +10,7 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
   공지사항 CRUD, QnA CRUD, ckEditor 기반 자유게시판 CRUD 구현
   - Ajax 기반 아이디 중복확인
 
-⚙ 개발 환경
+**⚙ 개발 환경**
 - 운영체제 : Windows-11
 - 통합개발환경(IDE) : Intellij, STS
 - JDK version : JDK 1.8
@@ -18,7 +18,7 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 - 빌드 툴 : Maven
 - 관리 툴 : GitHub
 
-💻 기술 스택
+**💻 기술 스택**
 - 백엔드
   - Mybatis
 - 프론트엔드<br>
@@ -26,7 +26,7 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 - DB<br>
   - MySQL
 
-🔌 Dependencies
+**🔌 Dependencies**
 - Spring Web
 - Inject
 - Servlet
@@ -37,13 +37,13 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 - JSON
 - Commons
 
-🛠 DB 설계
+**🛠 DB 설계**
 <img src="./readmeImg/erd.png">
 
-📜 메뉴 구성
+**📜 메뉴 구성**
 <img src="./readmeImg/menu.png">
 
-🎥 화면 구조(업데이트중)
+**🎥 화면 구조(업데이트중)**
 - 메인화면
 <img src="./readmeImg/main.png">
 
@@ -71,7 +71,7 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
   - 조직도
   <img src="./readmeImg/organi.png">
 
-🕹 구현 기능 (작성중)
+**🕹 구현 기능 (작성중)**
 - Controller, Model(DAO), DTO, EL, JSTL 등을 활용한 데이터 바인딩
   - 공지 사항 CRUD
   - QnA CRUD
