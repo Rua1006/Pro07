@@ -1,7 +1,7 @@
 # Pro07 (SpringLegacy Project)
 Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 
-📢 프로젝트 설명<br>
+📢 프로젝트 설명
 - 개인프로젝트<br>
   - 정부중앙부처 식품의약품안전처를 주제로 진행한 개인프로젝트 <br>
   Spring Legacy > Maven MVC<br>
@@ -19,7 +19,7 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 - 관리 툴 : GitHub
 
 💻 기술 스택
-- 백엔드<br>
+- 백엔드
   - Mybatis
 - 프론트엔드<br>
   - HTML, CSS, Javascript, BootStrap 
@@ -40,7 +40,7 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 🛠 DB 설계
 <img src="./readmeImg/erd.png">
 
-🎥 화면 구조(업데이트중)<br>
+🎥 화면 구조(업데이트중)
 - 메인화면
 <img src="./readmeImg/main.png">
 
