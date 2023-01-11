@@ -7,7 +7,7 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
   Spring Legacy > Maven MVC<br>
 - 구현 목표<br>
   - Controller, Model(DAO), DTO, EL, JSTL 등을 활용한 데이터 바인딩으로
-  공지사항 CRUD, QnA CRUD, ckEditor 기반 자유게시판 CRUD 구현
+  공지 CRUD, QnA(국민제안) CRUD, ckEditor 기반 자유게시판 CRUD 구현
   - Ajax 기반 아이디 중복확인
 
 ### ⚙ 개발 환경
@@ -44,8 +44,11 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 <img src="./readmeImg/menu.png">
 
 ### 📟 시퀸스 로직
+- 회원
 <img src="./readmeImg/users.PNG">
+- 공지
 <img src="./readmeImg/notice.PNG">
+- 국민제안
 <img src="./readmeImg/qna.PNG">
 
 ### 🎥 화면 구조(업데이트중)
@@ -79,6 +82,6 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 ### 🕹 구현 기능 (작성중)
 - Controller, Model(DAO), DTO, EL, JSTL 등을 활용한 데이터 바인딩
   - 공지 사항 CRUD
-  - QnA CRUD
+  - QnA(국민제안) CRUD
   - 회원 CRUD
   - Ajax 아이디 중복확인
