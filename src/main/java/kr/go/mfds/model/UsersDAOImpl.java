@@ -36,7 +36,7 @@ public class UsersDAOImpl implements UsersDAO{
 
     @Override
     public UsersDTO loginCheck(UsersDTO mdto) throws Exception {
-        mdto = sqlSession.selectOne("users.loginCheck", mdto);
+        sqlSession.selectOne("users.loginCheck", mdto);
         return mdto;
     }
 

@@ -99,7 +99,6 @@ public class NewsController {
             String path = "D:\\kbs\\pro07\\pro07\\src\\main\\webapp\\resources\\upload"+"ckImage/";	// 이미지 경로 설정(폴더 자동 생성)
             String ckUploadPath = path + uid + "_" + fileName;
             File folder = new File(path);
-            System.out.println("path:"+path);	// 이미지 저장경로 console에 확인
             //해당 디렉토리 확인
             if(!folder.exists()){
                 try{
@@ -141,7 +140,6 @@ public class NewsController {
 
         //서버에 저장된 이미지 경로
         String path = "D:\\kbs\\pro07\\pro07\\src\\main\\webapp\\resources\\upload"+"ckImage/";	// 저장된 이미지 경로
-        System.out.println("path:"+path);
         String sDirPath = path + uid + "_" + fileName;
 
         File imgFile = new File(sDirPath);

@@ -43,6 +43,11 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 ### 📜 메뉴 구성
 <img src="./readmeImg/menu.png">
 
+### 📟 시퀸스 로직
+<img src="./readmeImg/users.PNG">
+<img src="./readmeImg/notice.PNG">
+<img src="./readmeImg/qna.PNG">
+
 ### 🎥 화면 구조(업데이트중)
 - 메인화면
 <img src="./readmeImg/main.png">
