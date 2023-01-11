@@ -45,7 +45,7 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 
 ### 📟 시퀸스 로직
 - 회원
-<img src="./readmeImg/users.PNG">
+<img src="./readmeImg/user.PNG">
 - 공지
 <img src="./readmeImg/notice.PNG">
 - 국민제안
