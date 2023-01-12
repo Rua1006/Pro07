@@ -14,6 +14,8 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
 
@@ -103,12 +105,12 @@ public class NewsController {
             if(!folder.exists()){
                 try{
                     folder.mkdirs(); // 폴더 생성
-                }catch(Exception e){
-                    e.getStackTrace();
+                }catch(Exception se){
+                    se.getStackTrace();
                 }
             }
 
-            out = new FileOutputStream(new File(ckUploadPath));
+            OutputStream os = Files.newOutputStream(Paths.get(ckUploadPath));
             out.write(bytes);
             out.flush(); // outputStram에 저장된 데이터를 전송하고 초기화
 
@@ -156,7 +158,7 @@ public class NewsController {
             ServletOutputStream out = null;
 
             try{
-                fileInputStream = new FileInputStream(imgFile);
+                InputStream is = Files.newInputStream(Paths.get(String.valueOf(imgFile)));
                 outputStream = new ByteArrayOutputStream();
                 out = response.getOutputStream();
 

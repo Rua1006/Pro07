@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -28,7 +26,6 @@ import kr.go.mfds.service.UsersService;
 @Controller
 @RequestMapping("/users/")
 public class UsersController {
-    private static final Logger logger = LoggerFactory.getLogger(UsersController.class);
 
     @Autowired
     UsersService usersService;
@@ -52,7 +49,8 @@ public class UsersController {
         return "users/usersList";
     }
     // 관리자 회원 정보 보기
-    @RequestMapping(value="getUsers.do", method = RequestMethod.GET)
+    @RequestMapping(value="getUsers" +
+            ".do", method = RequestMethod.GET)
     public String getMember(@RequestParam("id") String id, Model model) throws Exception {
         UsersDTO users = usersService.getUsers(id);
         model.addAttribute("users", users);
@@ -143,12 +141,12 @@ public class UsersController {
         UsersDTO users = usersService.loginCheck(mdto);
         boolean mat = pwdEncoder.matches(mdto.getPw(), users.getPw());
         if(mat==true && users!=null) {
-            logger.info("로그인 성공");
+
             session.setAttribute("users", users);
             session.setAttribute("sid", users.getId());
             return "redirect:/";
         } else {
-            logger.info("로그인 실패");
+
             session.setAttribute("users", null);
             rttr.addFlashAttribute("msg", false);
             return "redirect:loginForm.do";

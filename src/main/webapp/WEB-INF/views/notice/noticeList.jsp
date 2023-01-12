@@ -52,7 +52,12 @@
       <c:forEach items="${noticeList}" var="notice" varStatus="status">
         <tr>
           <td>${status.count}</td>
-          <td><a href="/notice/detail.do?no=${notice.no}">${notice.title}</a></td>
+          <c:if test="${not empty sid}">
+            <td><a href="/notice/detail.do?no=${notice.no}">${notice.title}</a></td>
+          </c:if>
+          <c:if test="${empty sid}">
+            <td>${notice.title}</td>
+          </c:if>
           <td>
             <fmt:parseDate value="${notice.resdate}" var="resdate" pattern="yyyy-MM-dd HH:mm:ss"/>
             <fmt:formatDate value="${resdate}" pattern="yyyy-MM-dd"></fmt:formatDate>

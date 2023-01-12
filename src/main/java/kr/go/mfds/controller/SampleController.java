@@ -2,8 +2,6 @@ package kr.go.mfds.controller;
 
 import kr.go.mfds.dto.SampleDTO;
 import kr.go.mfds.service.SampleService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +15,6 @@ import java.util.Map;
 @Controller
 @RequestMapping("/sample/")
 public class SampleController {
-	private static final Logger log = LoggerFactory.getLogger(SampleController.class);	
 	@Autowired
 	SampleService sampleService;
 	
@@ -30,7 +27,6 @@ public class SampleController {
 	
 	@GetMapping("getSample")
 	public String getSample(@RequestParam String id, Model model) throws Exception {
-		log.info("id : "+id);
 		SampleDTO sample = sampleService.getSample(id);
 		model.addAttribute("sample", sample);
 		return "sample/getSample";
