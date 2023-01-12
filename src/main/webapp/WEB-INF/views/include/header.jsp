@@ -35,7 +35,7 @@
             <li><a href="#" class="submenu-item">자유게시판</a></li>
             <li><a href="${path1}/qna/list.do" class="submenu-item">국민제안</a></li>
             <li><a href="#" class="submenu-item">국민신문고</a></li>
-            <li><a href="#" class="submenu-item">통합상담</a></li>
+            <li><a href="${path1}/research/solution.do" class="submenu-item">통합상담</a></li>
           </ul>
         </li>
         <li>
