@@ -68,9 +68,11 @@ Goverment(식품의약품안전처) + SpringLegacy + Maven MVC Project + MySql
 - 메뉴3(알림)
   - 공지
   <img src="./readmeImg/noticeList.png">
-  - 공지작성
-  <img src="./readmeImg/noticeInsert.png">
-  
+  - 공지 작성
+  <img src="./readmeImg/noticeInsert.png"> 
+  - 공지 세부
+  <img src="./readmeImg/noticeDetail.png">
+- 
 - 메뉴4(식약처소개)
   - 비전/슬로건
   <img src="./readmeImg/vision.png">
