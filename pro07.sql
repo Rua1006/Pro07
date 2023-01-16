@@ -2,6 +2,18 @@ create database mfds;
 -- 식품의약품안전처 
 use mfds;
 
+-- 샘플데이터
+create table sample(id varchar(20), pw varchar(20));
+
+insert into sample values('kkt', '1234');
+insert into sample values('kim', '1004');
+insert into sample values('lee', '1111');
+insert into sample values('cho', '2222');
+insert into sample values('jeong', '3333');
+
+commit; 
+
+
 -- 회원 테이블(자동증가번호, 아이디, 비밀번호, 이름) 
 create table users (
 	no int primary key auto_increment,

@@ -1,20 +1,23 @@
 package kr.go.mfds.controller;
 
-import kr.go.mfds.dto.SampleDTO;
-import kr.go.mfds.service.SampleService;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import kr.go.mfds.dto.SampleDTO;
+import kr.go.mfds.service.SampleService;
 
 @Controller
 @RequestMapping("/sample/")
 public class SampleController {
+	private static final Logger log = LoggerFactory.getLogger(SampleController.class);	
 	@Autowired
 	SampleService sampleService;
 	
@@ -27,27 +30,9 @@ public class SampleController {
 	
 	@GetMapping("getSample")
 	public String getSample(@RequestParam String id, Model model) throws Exception {
+		log.info("id : "+id);
 		SampleDTO sample = sampleService.getSample(id);
 		model.addAttribute("sample", sample);
 		return "sample/getSample";
-	}
-
-	@ResponseBody
-	@GetMapping("test2/{id}/{pw}")
-	public Map<String, String> test2(@PathVariable("id") String id, @PathVariable("pw") String pw)  throws Exception {
-		Map<String, String> res = new HashMap<>();
-		res.put(id, pw);
-
-		return res;
-	}
-
-	@ResponseBody
-	@GetMapping("test3/{id}")
-	public List<String> test3(@PathVariable("id") String id){
-		List<String> lst = new ArrayList<String>();
-		for (int i=0; i<5; i++){
-			lst.add(id+i);
-		}
-		return lst;
 	}
 }

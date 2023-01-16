@@ -8,6 +8,12 @@
 		select * from sample where id=#{id}
 	</select>
 	<insert id="addSample">
-		insert into sample(id, pw) values #{id}, #{pw}
+		insert into sample values (#{id}, #{pw})
 	</insert>
+	<update id="updateSample">
+		update sample set pw=#{pw} where id=#{id}
+	</update>
+	<delete id="deleteSample">
+		delete from sample where id=#{id}
+	</delete>
 </mapper>
