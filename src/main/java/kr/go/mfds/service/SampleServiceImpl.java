@@ -2,6 +2,7 @@ package kr.go.mfds.service;
 
 import kr.go.mfds.dto.SampleDTO;
 import kr.go.mfds.model.SampleDAO;
+import org.apache.ibatis.javassist.tools.rmi.Sample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +25,17 @@ public class SampleServiceImpl implements SampleService {
 	}
 
 	@Override
-	public void addSample(SampleDTO sample) throws Exception {
-		sampleDao.addSample(sample);
+	public SampleDTO addSample(SampleDTO sample) throws Exception {
+		return sampleDao.addSample(sample);
+	}
+
+	@Override
+	public void updateSample(SampleDTO sampleDTO) throws Exception {
+		sampleDao.updateSample(sampleDTO);
+	}
+
+	@Override
+	public void deleteSample(String id) throws Exception {
+		sampleDao.deleteSample(id);
 	}
 }

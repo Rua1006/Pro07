@@ -20,8 +20,9 @@ public class RestDAO {
         return sqlSession.selectOne("sample.getSample", id);
     }
 
-    public void addSample(SampleDTO sample) throws Exception {
+    public SampleDTO addSample(SampleDTO sample) throws Exception {
         sqlSession.insert("sample.addSample", sample);
+        return sample;
     }
 
     public void updateSample(SampleDTO sample) throws Exception {

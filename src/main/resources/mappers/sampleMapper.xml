@@ -7,13 +7,13 @@
 	<select id="getSample" resultType="kr.go.mfds.dto.SampleDTO">
 		select * from sample where id=#{id}
 	</select>
-	<insert id="addSample">
-		insert into sample values (#{id}, #{pw})
+	<insert id="addSample" parameterType="kr.go.mfds.dto.SampleDTO">
+		insert into sample(id, pw) values (#{id}, #{pw})
 	</insert>
-	<update id="updateSample">
+	<update id="updateSample" parameterType="kr.go.mfds.dto.SampleDTO">
 		update sample set pw=#{pw} where id=#{id}
 	</update>
-	<delete id="deleteSample">
+	<delete id="deleteSample" parameterType="kr.go.mfds.dto.SampleDTO">
 		delete from sample where id=#{id}
 	</delete>
 </mapper>
